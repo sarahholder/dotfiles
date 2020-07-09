@@ -37,8 +37,8 @@ bind-key -T copy-mode-vi y send-keys -X copy-pipe-and-cancel "reattach-to-user-n
 bind-key -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "reattach-to-user-namespace pbcopy" \; display-message "highlighted selection copied to system clipboard"
 
 # Easy-to-remember split pane commands
-bind \ split-window -h -c '#{pane_current_path}' # vertical pane
 bind - split-window -v -c '#{pane_current_path}' # horizontal pane
+bind \\ split-window -h -c '#{pane_current_path}' # vertical pane
 unbind '"'
 unbind %
 
@@ -77,7 +77,7 @@ set -g status-position bottom
 set -g status-style bg=colour237,fg=colour137
 set -g status-style 'none'
 set -g status-left ' #[fg=colour197]#(~/bin/internet_info.sh) '
-set -g status-right '#{prefix_highlight} #(eval ~/.tmux/responsive `tmux display -p "#{client_width}"`)#[fg=colour051] #H'
+set -g status-right '#{prefix_highlight} #(eval ~/.tmux/responsive `tmux display -p "#{client_width}"`)#[fg=colour051]'
 set -g status-right-length 100
 set -g status-left-length 80
 
@@ -100,6 +100,7 @@ setw -g window-status-current-format ' #I#[fg=colour250]:#[fg=colour255]#W#[fg=c
    tmux-plugins/tmux-prefix-highlight \
    tmux-plugins/tmux-resurrect \
    tmux-plugins/tmux-sessionist \
+   xamut/tmux-spotify \
 '
 
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)

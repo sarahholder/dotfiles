@@ -10,3 +10,12 @@ alias jdk8s3='k config use-context jdk8s3'
 alias js='~/bin/show-struct.py'
 #acs-engine
 alias acse="/usr/local/bin/acs-engine"
+alias spark='npm run generate-graphql-types && npm start'
+alias typgen='npm run typegen'
+alias c='timew'
+alias ta='task add'
+alias tm='task modify'
+alias td='task done'
+alias tl='task list'
+alias tws='timew summary :ids'
+alias 1pc='create-1pw-login.sh'

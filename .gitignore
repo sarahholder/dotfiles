@@ -14,3 +14,5 @@ bin/bandwidth.json
 bin/bandwidth.log
 
 git/gitconfig.local.symlink
+
+.history

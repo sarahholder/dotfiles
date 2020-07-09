@@ -1,0 +1,9 @@
+pane	2	0	:zsh	1	:*	0	:/Users/raymonddoran/.dotfiles/tmux/plugins/tmux-tasks	0	vim	:vim README.md
+pane	2	0	:zsh	1	:*	1	:/Users/raymonddoran/development/auctionedge/edge-spark-react	0	node	:npm  
+pane	2	0	:zsh	1	:*	2	:/Users/raymonddoran/.dotfiles/tmux/plugins/tmux-resurrect	1	zsh	:
+pane	3	0	:zsh	1	:*	0	:/Users/raymonddoran	1	zsh	:
+pane	5	0	:zsh	1	:*	0	:/Users/raymonddoran	1	zsh	:
+window	2	0	1	:*	a54b,218x58,0,0{109x58,0,0,3,108x58,110,0[108x29,110,0,4,108x28,110,30,5]}
+window	3	0	1	:*	d0e6,218x58,0,0,9
+window	5	0	1	:*	d0e5,218x58,0,0,8
+state	2	3

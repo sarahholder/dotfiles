@@ -3,6 +3,7 @@
 CALENDAR=☼
 
 WIDTH=${1}
+TASK_LIST=${2}
 
 SMALL=80
 MEDIUM=107
@@ -13,6 +14,7 @@ if [ "$WIDTH" -gt "$X_LARGE" ]; then
   MPD="#[fg=colour81]♪ #(~/bin/now_playing.sh)"
   BATTERY="#(~/bin/battery.sh)"
   date_colour='colour41'
+  TASKS="$TASK_LIST"
 fi
 
 if [ "$WIDTH" -ge "$LARGE" ]; then
