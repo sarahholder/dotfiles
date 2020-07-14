@@ -222,3 +222,6 @@ export SDKMAN_DIR="/Users/raymonddoran/.sdkman"
 [[ -s "/Users/raymonddoran/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/raymonddoran/.sdkman/bin/sdkman-init.sh"
 # Add Visual Studio Code (code)
 export PATH="/usr/local/opt/python/libexec/bin:$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+if [ -d "$HOME/Library/Python/3.8/bin/" ] ; then
+    PATH="$HOME/Library/Python/3.8/bin/:$PATH"
+fi

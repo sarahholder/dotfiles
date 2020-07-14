@@ -9,6 +9,7 @@ alias jdk8s='k config use-context jdk8s-us'
 alias jdk8s3='k config use-context jdk8s3'
 alias js='~/bin/show-struct.py'
 #acs-engine
+# SUPER IMPORTANT ALIASES!!
 alias acse="/usr/local/bin/acs-engine"
 alias spark='npm run generate-graphql-types && npm start'
 alias typgen='npm run typegen'
@@ -17,5 +18,27 @@ alias ta='task add'
 alias tm='task modify'
 alias td='task done'
 alias tl='task list'
+alias stop='timew stop'
 alias tws='timew summary :ids'
+alias twm='timew modify'
+alias twv='timew move'
 alias 1pc='create-1pw-login.sh'
+alias sp="spotify"
+alias spv="spotify vol"
+alias spvu="spotify vol up"
+alias spvd="spotify vol down"
+alias spvn="spotify next"
+alias spshare="spotify share url"
+alias heroes="spotify play david bowie heroes"
+alias csa="spotify play styx come sail away"
+alias heartless="spotify play ASPyN heartless"
+alias try="spotify play uri spotify:track:1dLvNP6I96hNXdf5IJ780N"
+alias rr="spotify play uri spotify:playlist:37i9dQZEVXbck8blB0yyBa"
+alias v="vim"
+alias ddg="s -b lynx -p duckduckgo"
+alias t2g="terminalizer record"
+alias t2gp="terminalizer play"
+alias t2gr="terminalizer render"alias giphy="gif-for-cli"
+alias th="ssh -p 6668 tdf@telehack.com"
+alias dj="curl -H 'Accept: text/plain' https://icanhazdadjoke.com/; echo"
+alias tk="tmux kill-session -a"
