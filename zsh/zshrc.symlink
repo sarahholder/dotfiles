@@ -5,10 +5,11 @@
 #   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 # fi
 
-# Path to your oh-my-zsh installation oh-my-zsh specific settings
+# Path to your oh-my-zsh installation oh-my-zsh specific setting
 export ZSH=~/.oh-my-zsh
 export TERM=xterm-256color
 source $ZSH/oh-my-zsh.sh
+source ~/emoji-cli/emoji-cli.zsh
 
 # ZSH Customization Settings
 ZSH_THEME="powerlevel10k/powerlevel10k"
@@ -92,7 +93,7 @@ DEFAULT_USER="$(whoami)"
 # export UPDATE_ZSH_DAYS=13
 
 #Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
+#DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
@@ -117,7 +118,7 @@ DEFAULT_USER="$(whoami)"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-plugins=(sudo git brew npm history tmux tmuxinator zsh-autosuggestions zsh-completions zsh-z hacker-quotes)
+plugins=(sudo git brew npm history tmux tmuxinator zsh-autosuggestions zsh-completions zsh-syntax-highlighting zsh-z hacker-quotes zsh-aws-vault)
 
 # User configuration
 
@@ -148,15 +149,17 @@ source $ZSH_CUSTOM/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOME/.p9kgt
 source $HOME/.functions
 source $HOME/.aliases
+source $HOME/.ae 
 
 # autoload ----------------------------------------------------------------------
 autoload -Uz vcs_info 
-autoload -Uz colors && colors
+#autoload -Uz colors && colors
 autoload -U compinit && compinit
 
 # syntax highlighting
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 
+typeset -A ZSH_HIGHLIGHT_STYLES
 #styles
 ZSH_HIGHLIGHT_STYLES[default]=none
 # ZSH_HIGHLIGHT_STYLES[function]=fg=magenta,bold
@@ -188,10 +191,13 @@ export M2_HOME=/usr/local/Cellar/maven/3.6.1/libexec/
 
 #---- End Export ----
 
+cc() python3 -c "from math import *; print($*);"
+alias cc='noglob cc'
+
 #---- Source ----
 [ -f ~/bin/fubectl.source ] && source ~/bin/fubectl.source
 source <(kubectl completion zsh)
-source $(dirname $(gem which colorls))/tab_complete.sh
+# source $(dirname $(gem which colorls))/tab_complete.sh
 #---- End Source ----
 #---- END CUSTOM ----
 alias h3=/usr/local/bin/tmp/helm
@@ -216,6 +222,10 @@ export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 eval "$(direnv hook zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# AWS Vault 
+export AWS_VAULT_KEYCHAIN_NAME=login
+export AWS_PROFILE=edge-prod
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/raymonddoran/.sdkman"

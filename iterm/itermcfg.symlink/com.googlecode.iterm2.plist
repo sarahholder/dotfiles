@@ -36041,6 +36041,8 @@
 	</dict>
 	<key>Default Bookmark Guid</key>
 	<string>D6FD887B-FC90-4517-AF0A-BAFDEC4DBDE2</string>
+	<key>EnableAPIServer</key>
+	<false/>
 	<key>EnableRendezvous</key>
 	<false/>
 	<key>HapticFeedbackForEsc</key>
@@ -36099,11 +36101,13 @@
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>568 606 400 129 0 0 1536 960 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>458 408 620 392 0 0 1536 937 </string>
+	<string>2186 435 620 392 1536 -63 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>-1578 240 1089 442 -1920 0 1920 1080 </string>
+	<string>1688 514 1074 442 1536 0 1920 1080 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>145 100 1089 426 0 0 1536 960 </string>
+	<string>145 101 1089 426 0 0 1536 960 </string>
+	<key>NSWindow Frame iTerm Window 2</key>
+	<string>1804 21 1089 426 1536 -63 1920 1080 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -36822,7 +36826,7 @@
 			<key>Prompt Before Closing 2</key>
 			<false/>
 			<key>Right Option Key Sends</key>
-			<integer>0</integer>
+			<integer>1</integer>
 			<key>Rows</key>
 			<integer>25</integer>
 			<key>Screen</key>
@@ -38359,6 +38363,7 @@
 		<string>3.3.8</string>
 		<string>3.3.11</string>
 		<string>3.3.7</string>
+		<string>3.3.12</string>
 	</array>
 	<key>NoSyncBFPRecents</key>
 	<array>
@@ -38370,16 +38375,16 @@
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{-1920, 0}, {1920, 1080}}</string>
+		<string>{{1536, -63}, {1920, 1080}}</string>
 		<key>topLeft</key>
-		<string>{-1660, 752}</string>
+		<string>{1816, 855}</string>
 	</dict>
 	<key>NoSyncInstallationId</key>
 	<string>4C9234CF-2A07-4097-9FFB-3AC865D5F3EE</string>
 	<key>NoSyncLastTipTime</key>
 	<real>609266929.39258599</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>88</integer>
+	<integer>149</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -39224,11 +39229,11 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-06-26T08:36:59Z</date>
+	<date>2020-08-07T21:53:47Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateGroupIdentifier</key>
-	<integer>3721057183</integer>
+	<integer>2633068382</integer>
 	<key>SUUpdateRelaunchingMarker</key>
 	<false/>
 	<key>SoundForEsc</key>
@@ -39246,7 +39251,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.3.11</string>
+	<string>3.3.12</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>

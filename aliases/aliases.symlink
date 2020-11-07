@@ -11,8 +11,6 @@ alias js='~/bin/show-struct.py'
 #acs-engine
 # SUPER IMPORTANT ALIASES!!
 alias acse="/usr/local/bin/acs-engine"
-alias spark='npm run generate-graphql-types && npm start'
-alias typgen='npm run typegen'
 alias c='timew'
 alias ta='task add'
 alias tm='task modify'
@@ -42,3 +40,17 @@ alias t2gr="terminalizer render"alias giphy="gif-for-cli"
 alias th="ssh -p 6668 tdf@telehack.com"
 alias dj="curl -H 'Accept: text/plain' https://icanhazdadjoke.com/; echo"
 alias tk="tmux kill-session -a"
+alias t="time"
+alias trash="rmtrash"
+alias del="rmtrash"
+alias rm="echo Use 'del', or the full path i.e. '/bin/rm'"
+alias ll="ls -la"
+alias l.="ls -d .* --color=auto"
+alias cd..="cd .."
+alias ..="cd .."
+alias ..."cd ../.."
+alias ....="cd ../../.."
+alias ./="cd"
+alias tg="npm run typegen"
+alias t=time
+alias vd="./vault-deploy.sh raymondd"
