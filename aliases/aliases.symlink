@@ -9,6 +9,7 @@ alias jdk8s='k config use-context jdk8s-us'
 alias jdk8s3='k config use-context jdk8s3'
 alias js='~/bin/show-struct.py'
 #acs-engine
+
 # SUPER IMPORTANT ALIASES!!
 alias acse="/usr/local/bin/acs-engine"
 alias c='timew'
@@ -21,6 +22,7 @@ alias tws='timew summary :ids'
 alias twm='timew modify'
 alias twv='timew move'
 alias 1pc='create-1pw-login.sh'
+# SPOTIFY
 alias sp="spotify"
 alias spv="spotify vol"
 alias spvu="spotify vol up"
@@ -29,9 +31,21 @@ alias spvn="spotify next"
 alias spshare="spotify share url"
 alias heroes="spotify play david bowie heroes"
 alias csa="spotify play styx come sail away"
-alias heartless="spotify play ASPyN heartless"
-alias try="spotify play uri spotify:track:1dLvNP6I96hNXdf5IJ780N"
-alias rr="spotify play uri spotify:playlist:37i9dQZEVXbck8blB0yyBa"
+alias heartless="play ASPyN heartless"
+#spotify play uris
+alias spu="spotify play uri "
+alias onrepeat="spotify:playlist:37i9dQZF1Eplh3RhbO4Csi"
+alias sp2020="spotify:playlist:37i9dQZF1EMdPDVtsUjRYw"
+alias sprr="spotify:playlist:37i9dQZEVXbck8blB0yyBa"
+alias spdw="spotify:playlist:37i9dQZEVXcLLDv7JVXSPj"
+alias dm1="spotify:playlist:37i9dQZF1E36vBQObMCcNU"
+alias dm2="spotify:playlist:37i9dQZF1E34Tq59JA5BsQ"
+alias dm3="spotify:playlist:37i9dQZF1E37iJl3sIXmoA"
+alias dm4="spotify:playlist:37i9dQZF1E37pYIFBksER6"
+alias dm5="spotify:playlist:37i9dQZF1E35fWlQdf0S3M"
+alias dm6="spotify:playlist:37i9dQZF1E35ms9IuxreYz"
+alias try="spotify:track:1dLvNP6I96hNXdf5IJ780N"
+alias rr="spotify:playlist:37i9dQZEVXbck8blB0yyBa"
 alias v="vim"
 alias ddg="s -b lynx -p duckduckgo"
 alias t2g="terminalizer record"
@@ -54,3 +68,7 @@ alias ./="cd"
 alias tg="npm run typegen"
 alias t=time
 alias vd="./vault-deploy.sh raymondd"
+
+#####----------Run typegen and Spark app build-----------######
+alias spark="npm run generate-graphql-types && npm start"
+alias v="npm run typegen && ~/development/auctionedge/cloud_integrations/spark_api/spark-api-appsync/vault-deploy.sh"
