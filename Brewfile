@@ -31,6 +31,8 @@ brew 'watch'
 brew 'wget'
 brew 'yarn'
 brew 'youtube-dl'
+brew 'boxes'
+brew 'neovim'
 
 cask 'google-chrome'
 cask 'handbrake'

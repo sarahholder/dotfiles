@@ -9,7 +9,7 @@
 export ZSH=~/.oh-my-zsh
 export TERM=xterm-256color
 source $ZSH/oh-my-zsh.sh
-source ~/emoji-cli/emoji-cli.zsh
+source ~/.oh-my-zsh/custom/plugins/emoji-cli/emoji-cli.zsh
 
 # ZSH Customization Settings
 ZSH_THEME="powerlevel10k/powerlevel10k"
@@ -149,7 +149,7 @@ source $ZSH_CUSTOM/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOME/.p9kgt
 source $HOME/.functions
 source $HOME/.aliases
-source $HOME/.ae 
+# source $HOME/.ae 
 
 # autoload ----------------------------------------------------------------------
 autoload -Uz vcs_info 
@@ -188,6 +188,7 @@ export MONGO_PATH=/usr/local/mongodb
 export PATH=$PATH:$MONGO_PATH/bin
 export PATH="/usr/local/bin/jdk8u212-b04/Contents/Home/bin:$PATH"
 export M2_HOME=/usr/local/Cellar/maven/3.6.1/libexec/
+export FZF_DEFAULT_COMMAND='fdfind --type f --hidden --follow --exclude .git --exclude .vim'
 
 #---- End Export ----
 
