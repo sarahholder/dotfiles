@@ -68,7 +68,8 @@ alias ./="cd"
 alias tg="npm run typegen"
 alias t=time
 alias vd="./vault-deploy.sh raymondd"
-
-#####----------Run typegen and Spark app build-----------######
 alias spark="npm run generate-graphql-types && npm start"
-alias v="npm run typegen && ~/development/auctionedge/cloud_integrations/spark_api/spark-api-appsync/vault-deploy.sh"
+alias vtd="npm run typegen && ~/development/auctionedge/cloud_integrations/spark_api/spark-api-appsync/vault-deploy.sh"
+alias cappsync="cd /Users/raymonddoran/development/auctionedge/cloud_integrations/spark_api/spark-api-appsync"
+alias cspark="cd /Users/raymonddoran/development/auctionedge/edge-spark-react"
+alias st=speedtest

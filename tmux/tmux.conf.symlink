@@ -2,6 +2,7 @@
 # credit for migration goes to github.com/tbutts
 # migration script can be found here: https://gist.github.com/tbutts/6abf7fb5b948c066bf180922fb37adcf
 
+
 # remap prefix to Control + a
 set -g prefix C-a
 unbind C-b
@@ -14,8 +15,13 @@ bind-key R source-file ~/.tmux.conf \; display-message "tmux.conf reloaded."
 bind-key ] send-prefix
 bind-key C-] last-window
 
-set -g default-terminal "xterm-256color"
+set -g default-terminal "screen-256color"
+# tell Tmux that outside terminal supports true color
+set -ga terminal-overrides ",xterm-256color*:Tc"
 # set-option -g default-command "reattach-to-user-namespace -l zsh"
+
+# set escape time lower.
+set -g escape-time 100
  
 set-option -g history-limit 30000
 

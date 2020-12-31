@@ -7,7 +7,7 @@
 
 # Path to your oh-my-zsh installation oh-my-zsh specific setting
 export ZSH=~/.oh-my-zsh
-export TERM=xterm-256color
+# export TERM=xterm-256color
 source $ZSH/oh-my-zsh.sh
 source ~/.oh-my-zsh/custom/plugins/emoji-cli/emoji-cli.zsh
 
@@ -177,7 +177,7 @@ ZSH_HIGHLIGHT_STYLES[path_approx]=fg=cyan
 ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red') # To have commands starting with `rm -rf` in red:
 
 #---- Export ----
-export PATH=$PATH:/Users/raymonddoran/bin:~/Library/Python/2.7/bin
+export PATH=$PATH:/Users/raymonddoran/bin:~/Library/Python/2.7/bin:~/Library/Python/3.9/bin
 export GOPATH=~/go 
 export PATH=$GOPATH/bin:$PATH
 export GOROOT=/usr/local/opt/go/libexec
