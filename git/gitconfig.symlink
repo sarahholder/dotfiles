@@ -1,4 +1,6 @@
 # Local/private config goes in the include
+[init]
+	templatedir = ~/.git_template
 [include]
         path = ~/.gitconfig.local
 [hub]

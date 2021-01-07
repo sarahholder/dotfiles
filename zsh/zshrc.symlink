@@ -225,7 +225,9 @@ eval "$(direnv hook zsh)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # AWS Vault 
-export AWS_VAULT_KEYCHAIN_NAME=login
+export AWS_VAULT_PASS_PREFIX=aws-vault
+export AWS_VAULT_BACKEND=pass
+# export AWS_VAULT_KEYCHAIN_NAME=login
 export AWS_PROFILE=edge-prod
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
