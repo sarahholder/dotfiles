@@ -38230,7 +38230,7 @@
 			<key>Mouse Reporting</key>
 			<true/>
 			<key>Name</key>
-			<string>RaymondDoran</string>
+			<string>sarahholder</string>
 			<key>Non Ascii Font</key>
 			<string>Menlo-Regular 11</string>
 			<key>Non-ASCII Anti Aliased</key>
@@ -38334,6 +38334,8 @@
 	</array>
 	<key>OpenBookmark</key>
 	<false/>
+	<key>OpenTmuxDashboardIfHiddenWindows</key>
+	<true/>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>

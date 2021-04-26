@@ -17,7 +17,6 @@ bind-key C-] last-window
 
 set -g default-terminal "screen-256color"
 # tell Tmux that outside terminal supports true color
-set -ga terminal-overrides ",xterm-256color*:Tc"
 # set-option -g default-command "reattach-to-user-namespace -l zsh"
 
 # set escape time lower.

@@ -11,7 +11,7 @@ spark-env() {                    # shoutout to raymondd and andrews for the insp
   echo ''
   if [ -z "$1" ]; then # if length arg != 0 (not empty string)
     PS3=$'\n'"%F{green}Select an environment:%{$reset_color%} "
-    files=($(find . -type f -iname "*.env.*"))
+    files=($(find . -type f -iname "*.env*"))
     select file in "${files[@]}"; do
       if [ 1 -le "$REPLY" ] && [ "$REPLY" -le ${#files[@]} ]; then
         ENV_FILE=$file

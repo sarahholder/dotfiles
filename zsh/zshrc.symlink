@@ -4,12 +4,15 @@
 # if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
 #   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 # fi
+# ref https://github.com/zsh-users/zsh-autosuggestions/issues/238
 
 # Path to your oh-my-zsh installation oh-my-zsh specific setting
 export ZSH=~/.oh-my-zsh
 # export TERM=xterm-256color
 source $ZSH/oh-my-zsh.sh
-source ~/.oh-my-zsh/custom/plugins/emoji-cli/emoji-cli.zsh
+#source ~/.oh-my-zsh/custom/plugins/emoji-cli/emoji-cli.zsh
+# added for npm-completion https://github.com/Jephuff/npm-bash-completion
+#PATH_TO_NPM_COMPLETION="/Users/sarahholder/.nvm/versions/node/v14.5.0/lib/node_modules/npm-completion"
 
 # ZSH Customization Settings
 ZSH_THEME="powerlevel10k/powerlevel10k"
@@ -47,7 +50,7 @@ unset config_files
 ######################
 
 # #Background Jobs Function
-# set_default POWERLEVEL9K_BACKGROUND_JOBS_VERBOSE true
+# ault POWERLEVEL9K_BACKGROUND_JOBS_VERBOSE true
 # prompt_background_jobs() {
 # local background_jobs_number=${$(jobs -l | wc -l)// /}
 # local wrong_lines=`jobs -l | awk '/pwd now/{ count++ } END {print count}'`
@@ -177,7 +180,9 @@ ZSH_HIGHLIGHT_STYLES[path_approx]=fg=cyan
 ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red') # To have commands starting with `rm -rf` in red:
 
 #---- Export ----
-export PATH=$PATH:/Users/raymonddoran/bin:~/Library/Python/2.7/bin:~/Library/Python/3.9/bin
+export AWS_VAULT_KEYCHAIN_NAME=login
+export AWS_VAULT_PROMPT=osascript
+export PATH=$PATH:/Users/sarahholder/bin:~/Library/Python/2.7/bin:~/Library/Python/3.9/bin
 export GOPATH=~/go 
 export PATH=$GOPATH/bin:$PATH
 export GOROOT=/usr/local/opt/go/libexec
@@ -189,6 +194,7 @@ export PATH=$PATH:$MONGO_PATH/bin
 export PATH="/usr/local/bin/jdk8u212-b04/Contents/Home/bin:$PATH"
 export M2_HOME=/usr/local/Cellar/maven/3.6.1/libexec/
 export FZF_DEFAULT_COMMAND='fdfind --type f --hidden --follow --exclude .git --exclude .vim'
+
 
 #---- End Export ----
 
@@ -203,17 +209,17 @@ source <(kubectl completion zsh)
 #---- END CUSTOM ----
 alias h3=/usr/local/bin/tmp/helm
 
-export NVM_DIR="/Users/raymonddoran/.nvm"
+export NVM_DIR="/Users/sarahholder/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # Added by serverless binary installer
 export PATH="$HOME/.serverless/bin:$PATH"
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/raymonddoran/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/raymonddoran/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/sarahholder/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/sarahholder/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/raymonddoran/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/raymonddoran/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/Users/sarahholder/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/sarahholder/google-cloud-sdk/completion.zsh.inc'; fi
 
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 
@@ -225,16 +231,32 @@ eval "$(direnv hook zsh)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # AWS Vault 
-export AWS_VAULT_PASS_PREFIX=aws-vault
-export AWS_VAULT_BACKEND=pass
-# export AWS_VAULT_KEYCHAIN_NAME=login
+# export AWS_VAULT_PASS_PREFIX=aws-vault
+# export AWS_VAULT_BACKEND=pass
+export AWS_VAULT_KEYCHAIN_NAME=login
 export AWS_PROFILE=edge-prod
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/raymonddoran/.sdkman"
-[[ -s "/Users/raymonddoran/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/raymonddoran/.sdkman/bin/sdkman-init.sh"
 # Add Visual Studio Code (code)
 export PATH="/usr/local/opt/python/libexec/bin:$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 if [ -d "$HOME/Library/Python/3.8/bin/" ] ; then
     PATH="$HOME/Library/Python/3.8/bin/:$PATH"
 fi
+
+# Switch node-version when directory changes
+# https://github.com/creationix/nvm/issues/603#issuecomment-91290448
+function chpwd() {
+  if [ -r $PWD/.node-version ]; then
+    nvm use `cat $PWD/.node-version`
+  elif [ -r $PWD/.nvmrc ]; then
+    nvm use
+  fi
+}
+chpwd 
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/sarahholder/.sdkman"
+[[ -s "/Users/sarahholder/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/sarahholder/.sdkman/bin/sdkman-init.sh"
+
+
+
+
