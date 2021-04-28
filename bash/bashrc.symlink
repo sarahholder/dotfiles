@@ -125,8 +125,8 @@ GIT_PS1_SHOWUNTRACKEDFILES=1
 GIT_PS1_SHOWUPSTREAM="auto"
 
 # az cli
-autoload bashcompinit && bashcompinitsource /Users/jessicadeen/.git-completion.bash
-source /Users/jessicadeen/.git-completion.bash
-source /Users/jessicadeen/.git-completion.bash
+autoload bashcompinit && bashcompinitsource /Users/sarahholder/.git-completion.bash
+source /Users/sarahholder/.git-completion.bash
+source /Users/sarahhholder/.git-completion.bash
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash

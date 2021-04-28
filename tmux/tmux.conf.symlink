@@ -97,7 +97,7 @@ setw -g window-status-current-style fg=colour170,bg=colour239,bold
 
 setw -g window-status-current-format ' #I#[fg=colour250]:#[fg=colour255]#W#[fg=colour170]#F '
 
-set-option -g set-titles-string 'do epic shit. | #S | / #W'
+set-option -g set-titles-string 'sarah holder. | #S | / #W'
 setw -g window-status-current-format ' #I#[fg=colour250]:#[fg=colour255]#W#[fg=colour170]#F '
 
 # Plugins
