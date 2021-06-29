@@ -53,7 +53,6 @@
     "workbench.activityBar.visible": true,
     "workbench.sideBar.location": "left",
     "materialTheme.accent": "Indigo",
-    "workbench.iconTheme": "material-icon-theme",
     "team.showWelcomeMessage": false,
     "atlascode.jira.jqlList": [
         {
@@ -70,7 +69,6 @@
         "file:///Users/sarahholder/.vscode/extensions/atlassian.atlascode-2.8.6/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
     },
     "editor.formatOnPaste": true,
-    "editor.formatOnSave": true,
     "editor.formatOnType": true,
     "atlascode.jira.lastCreateSiteAndProject": {
         "siteId": "59f9c85e-f044-4f27-8f5d-da76b69a1273",
@@ -88,5 +86,10 @@
     "vsicons.dontShowNewVersionMessage": true,
     "atlascode.bitbucket.explorer.enabled": true,
     "atlascode.jira.enabled": true,
-    "window.zoomLevel": 1
+    "extensions.autoUpdate": false,
+    "workbench.iconTheme": "vscode-icons",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "window.zoomLevel": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
 }

@@ -12,7 +12,7 @@ export ZSH=~/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 #source ~/.oh-my-zsh/custom/plugins/emoji-cli/emoji-cli.zsh
 # added for npm-completion https://github.com/Jephuff/npm-bash-completion
-#PATH_TO_NPM_COMPLETION="/Users/sarahholder/.nvm/versions/node/v14.5.0/lib/node_modules/npm-completion"
+PATH_TO_NPM_COMPLETION="/Users/sarahholder/.nvm/versions/node/v14.5.0/lib/node_modules/npm-completion"
 
 # ZSH Customization Settings
 ZSH_THEME="powerlevel10k/powerlevel10k"
@@ -48,7 +48,6 @@ do
 done
 unset config_files
 ######################
-
 # #Background Jobs Function
 # ault POWERLEVEL9K_BACKGROUND_JOBS_VERBOSE true
 # prompt_background_jobs() {
@@ -99,7 +98,7 @@ DEFAULT_USER="$(whoami)"
 #DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -198,8 +197,8 @@ export FZF_DEFAULT_COMMAND='fdfind --type f --hidden --follow --exclude .git --e
 
 #---- End Export ----
 
-cc() python3 -c "from math import *; print($*);"
-alias cc='noglob cc'
+# cc() python3 -c "from math import *; print($*);"
+# alias cc='noglob cc'
 
 #---- Source ----
 [ -f ~/bin/fubectl.source ] && source ~/bin/fubectl.source
