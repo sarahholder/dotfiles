@@ -194,6 +194,19 @@ export PATH="/usr/local/bin/jdk8u212-b04/Contents/Home/bin:$PATH"
 export M2_HOME=/usr/local/Cellar/maven/3.6.1/libexec/
 export FZF_DEFAULT_COMMAND='fdfind --type f --hidden --follow --exclude .git --exclude .vim'
 
+# psql login info and aliases
+export ODS_DEV="db-ods.dev.edgeapps.net"
+export ODS_STAGE="db-ods.stage.edgeapps.net"
+export ODS_PROD="db-ods2.prod.edgeapps.net"
+export PGPASSFILE='/Users/sarahholder/.pgpass'
+#[pg-o-d]      PSQL To Dev ODS
+alias pg-o-d="psql -h${ODS_DEV} -Uusr_sarahh -dods_dev"
+#[pg-o-s]      PSQL To Stage ODS
+alias pg-o-s="psql -h${ODS_STAGE} -Uusr_sarahh -dods_stage"
+#[pg-o-p]      PSQL To Prod ODS
+alias pg-o-p="psql -h${ODS_PROD} -Uusr_sarahh -dods_prod"
+
+
 
 #---- End Export ----
 
